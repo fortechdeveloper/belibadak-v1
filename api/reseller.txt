@@ -1,4 +1,4 @@
-reseller01|passreseller01
+resellervipfrtch|buyermemberfrth02
 reseller02|passreseller02
 reseller03|passreseller03
 reseller04|passreseller04
