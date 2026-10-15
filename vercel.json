@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/api/qris/create", "destination": "/api/qris/create" },
+    { "source": "/api/qris/status", "destination": "/api/qris/status" },
+    { "source": "/api/qris/image",  "destination": "/api/qris/image"  },
+    { "source": "/api/account",     "destination": "/api/account"     }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    }
+  ]
+}
