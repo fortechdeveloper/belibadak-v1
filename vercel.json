@@ -7,17 +7,17 @@
       "maxDuration": 30
     }
   },
-  "rewrites": [
-    { "source": "/api/qris/create", "destination": "/api/qris/create" },
-    { "source": "/api/qris/status", "destination": "/api/qris/status" },
-    { "source": "/api/qris/image",  "destination": "/api/qris/image"  },
-    { "source": "/api/account",     "destination": "/api/account"     }
-  ],
   "headers": [
     {
       "source": "/api/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "no-store" }
+        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(jpg|jpeg|png|webp|svg|ico|woff2?)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     }
   ]
