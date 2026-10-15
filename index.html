@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="theme-color" content="#7DD3FC" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="description" content="Belibadak - Premium Access Store" />
+<title>Belibadak — Premium Access</title>
+<link rel="icon" type="image/jpeg" href="logo.jpg" />
+<link rel="apple-touch-icon" href="logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+
+<!-- Dekorasi background -->
+<div class="bg-canvas" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+  <span class="orb orb-4"></span>
+  <span class="grain"></span>
+</div>
+
+<!-- Overlay khusus desktop (website ini mobile-only) -->
+<div id="desktop-guard" class="desktop-guard">
+  <div class="guard-card glass">
+    <div class="guard-icon">
+      <i data-lucide="smartphone"></i>
+    </div>
+    <h2>Hanya untuk Handphone</h2>
+    <p>Halaman ini dirancang khusus untuk perangkat mobile. Silakan buka menggunakan smartphone Anda.</p>
+  </div>
+</div>
+
+<main class="app-shell">
+
+  <!-- ============ HEADER ============ -->
+  <header class="app-header glass-strong">
+    <div class="brand">
+      <div class="brand-logo-wrap">
+        <img src="logo.jpg" alt="Belibadak Logo" class="brand-logo" onerror="this.style.display='none';this.parentElement.classList.add('logo-fallback')" />
+        <span class="brand-logo-text">B</span>
+      </div>
+      <div class="brand-text">
+        <h1>Belibadak</h1>
+        <p>Premium Access Store</p>
+      </div>
+    </div>
+    <div class="header-badge">
+      <span class="dot"></span>
+      <span>Online</span>
+    </div>
+  </header>
+
+  <!-- ============ STEP 1: PILIH ROLE ============ -->
+  <section id="section-role" class="section is-active" data-step="1">
+    <div class="section-head">
+      <span class="step-chip">Step 1 / 3</span>
+      <h2 class="section-title">Pilih Role Kamu</h2>
+      <p class="section-sub">Tentukan paket akses yang ingin kamu beli</p>
+    </div>
+
+    <div class="role-list">
+
+      <!-- MEMBER -->
+      <button class="role-card glass-soft" data-role="member" data-price="3000" type="button">
+        <div class="role-glow role-glow--member"></div>
+        <div class="role-icon role-icon--member">
+          <i data-lucide="user"></i>
+        </div>
+        <div class="role-info">
+          <div class="role-name">Member</div>
+          <div class="role-desc">Akses dasar untuk pemakaian pribadi</div>
+          <div class="role-tags">
+            <span class="tag"><i data-lucide="check"></i> Login Akun</span>
+            <span class="tag"><i data-lucide="check"></i> Basic Support</span>
+          </div>
+        </div>
+        <div class="role-price">
+          <span class="rp">Rp</span>3<span class="k">K</span>
+          <i data-lucide="chevron-right" class="role-arrow"></i>
+        </div>
+      </button>
+
+      <!-- RESELLER -->
+      <button class="role-card glass-soft is-featured" data-role="reseller" data-price="4000" type="button">
+        <span class="ribbon">Terlaris</span>
+        <div class="role-glow role-glow--reseller"></div>
+        <div class="role-icon role-icon--reseller">
+          <i data-lucide="store"></i>
+        </div>
+        <div class="role-info">
+          <div class="role-name">Reseller</div>
+          <div class="role-desc">Bisa jual ulang & akses fitur extra</div>
+          <div class="role-tags">
+            <span class="tag"><i data-lucide="check"></i> Semua Fitur Member</span>
+            <span class="tag"><i data-lucide="check"></i> Reseller Tools</span>
+          </div>
+        </div>
+        <div class="role-price">
+          <span class="rp">Rp</span>4<span class="k">K</span>
+          <i data-lucide="chevron-right" class="role-arrow"></i>
+        </div>
+      </button>
+
+      <!-- OWNER -->
+      <button class="role-card glass-soft" data-role="owner" data-price="5000" type="button">
+        <div class="role-glow role-glow--owner"></div>
+        <div class="role-icon role-icon--owner">
+          <i data-lucide="crown"></i>
+        </div>
+        <div class="role-info">
+          <div class="role-name">Owner</div>
+          <div class="role-desc">Akses penuh & kontrol semua fitur</div>
+          <div class="role-tags">
+            <span class="tag"><i data-lucide="check"></i> Full Access</span>
+            <span class="tag"><i data-lucide="check"></i> Priority Support</span>
+          </div>
+        </div>
+        <div class="role-price">
+          <span class="rp">Rp</span>5<span class="k">K</span>
+          <i data-lucide="chevron-right" class="role-arrow"></i>
+        </div>
+      </button>
+
+    </div>
+
+    <div class="secure-note">
+      <i data-lucide="shield-check"></i>
+      <span>Pembayaran otomatis & aman via QRIS</span>
+    </div>
+  </section>
+
+  <!-- ============ STEP 2: PEMBAYARAN ============ -->
+  <section id="section-payment" class="section" data-step="2">
+
+    <button class="back-btn" id="btn-back-role" type="button">
+      <i data-lucide="arrow-left"></i>
+      <span>Ganti Role</span>
+    </button>
+
+    <div class="section-head">
+      <span class="step-chip">Step 2 / 3</span>
+      <h2 class="section-title">Selesaikan Pembayaran</h2>
+      <p class="section-sub">Scan QRIS di bawah ini dengan aplikasi e-wallet / m-banking kamu</p>
+    </div>
+
+    <!-- Ringkasan order -->
+    <div class="order-card glass-soft">
+      <div class="order-row">
+        <span class="order-label">Paket</span>
+        <span class="order-value" id="order-role">-</span>
+      </div>
+      <div class="order-row">
+        <span class="order-label">ID Transaksi</span>
+        <span class="order-value mono" id="order-id">-</span>
+      </div>
+      <div class="order-row">
+        <span class="order-label">Nominal</span>
+        <span class="order-value" id="order-base">-</span>
+      </div>
+      <div class="order-row">
+        <span class="order-label">Kode Unik</span>
+        <span class="order-value" id="order-unique">-</span>
+      </div>
+      <div class="order-divider"></div>
+      <div class="order-row order-row--total">
+        <span class="order-label">Total Bayar</span>
+        <span class="order-value total" id="order-total">-</span>
+      </div>
+    </div>
+
+    <!-- QR Box -->
+    <div class="qr-card glass-strong">
+      <div class="qr-header">
+        <div class="qr-brand">
+          <i data-lucide="qr-code"></i>
+          <span>QRIS</span>
+        </div>
+        <div class="qr-timer" id="qr-timer">
+          <i data-lucide="timer"></i>
+          <span id="timer-text">15:00</span>
+        </div>
+      </div>
+
+      <div class="qr-frame" id="qr-frame">
+        <div class="qr-skeleton" id="qr-skeleton">
+          <div class="skel-spinner"></div>
+          <p>Membuat QRIS...</p>
+        </div>
+        <img id="qr-image" class="qr-image" alt="QRIS Belibadak" hidden />
+        <div class="qr-scanline" aria-hidden="true"></div>
+      </div>
+
+      <div class="qr-actions">
+        <button class="btn-ghost" id="btn-download-qr" type="button" disabled>
+          <i data-lucide="download"></i>
+          <span>Simpan QR</span>
+        </button>
+        <button class="btn-ghost" id="btn-refresh" type="button">
+          <i data-lucide="refresh-cw"></i>
+          <span>Cek Manual</span>
+        </button>
+      </div>
+
+      <div class="status-pill" id="status-pill">
+        <span class="status-dot"></span>
+        <span id="status-text">Menunggu pembayaran...</span>
+      </div>
+
+      <p class="qr-hint">
+        <i data-lucide="info"></i>
+        Nominal harus <b>tepat</b> sesuai total. Sistem cek otomatis tiap 5 detik.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ============ STEP 3: SUKSES ============ -->
+  <section id="section-success" class="section" data-step="3">
+
+    <div class="success-hero">
+      <div class="success-check">
+        <i data-lucide="check"></i>
+      </div>
+      <h2 class="success-title">Pembayaran Berhasil</h2>
+      <p class="success-sub">Akun kamu sudah siap digunakan</p>
+    </div>
+
+    <div class="account-card glass-strong">
+      <div class="account-head">
+        <i data-lucide="key-round"></i>
+        <span>Data Akun — <span id="acc-role">-</span></span>
+      </div>
+
+      <div class="account-field">
+        <label>Username</label>
+        <div class="account-input">
+          <input type="text" id="acc-username" readonly value="-" />
+          <button class="copy-btn" data-copy="acc-username" type="button" aria-label="Copy username">
+            <i data-lucide="copy"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="account-field">
+        <label>Password</label>
+        <div class="account-input">
+          <input type="password" id="acc-password" readonly value="-" />
+          <button class="eye-btn" data-eye="acc-password" type="button" aria-label="Lihat password">
+            <i data-lucide="eye"></i>
+          </button>
+          <button class="copy-btn" data-copy="acc-password" type="button" aria-label="Copy password">
+            <i data-lucide="copy"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="account-warn">
+        <i data-lucide="alert-triangle"></i>
+        <span>Simpan data akun ini. Screenshot sekarang sebelum halaman ditutup.</span>
+      </div>
+    </div>
+
+    <div class="download-card glass-soft">
+      <div class="download-head">
+        <i data-lucide="package"></i>
+        <div>
+          <h3>Download Aplikasi</h3>
+          <p>Aplikasi akan terbuka otomatis dalam <b id="auto-count">8</b> detik</p>
+        </div>
+      </div>
+      <button class="btn-primary" id="btn-download-app" type="button">
+        <i data-lucide="download"></i>
+        <span>Download Sekarang</span>
+      </button>
+      <button class="btn-ghost btn-ghost--wide" id="btn-cancel-auto" type="button">
+        <i data-lucide="x"></i>
+        <span>Batalkan auto-download</span>
+      </button>
+    </div>
+
+    <button class="btn-ghost btn-ghost--wide" id="btn-restart" type="button">
+      <i data-lucide="rotate-ccw"></i>
+      <span>Beli Lagi</span>
+    </button>
+
+  </section>
+
+  <footer class="app-footer">
+    <p>© <span id="year"></span> Belibadak. All rights reserved.</p>
+  </footer>
+
+</main>
+
+<!-- Toast container -->
+<div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+<!-- Full-screen loader -->
+<div id="global-loader" class="loader-overlay" hidden>
+  <div class="loader-box glass">
+    <div class="loader-spinner"></div>
+    <p id="loader-text">Memproses...</p>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
