@@ -1,5 +1,5 @@
 buyermemberfrth|ForTechDev22
-member02|passmember02
+buyermemberfrth02|ForTechDeveloper022
 member03|passmember03
 member04|passmember04
 member05|passmember05
