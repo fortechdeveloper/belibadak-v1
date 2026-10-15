@@ -1,0 +1,9 @@
+{
+  "name": "belibadak",
+  "version": "1.0.0",
+  "description": "Belibadak Premium Access Store - Mobile Only",
+  "private": true,
+  "engines": {
+    "node": ">=18.x"
+  }
+}
